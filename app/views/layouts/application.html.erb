@@ -2,13 +2,25 @@
 <html>
 <head>
   <title>DanAlexanderAudio</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag    "bootstrap", :media => "all" %>
+  <%= javascript_include_tag "bootstrap" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand pull-left" href="<%= home_index_path %>">DanAlexanderAudio.com</a>
+      <ul class="nav">
+        <li class="divider-vertical"></li>
+        <li><a href="<%= new_info_path %>">New Info</a></li>
+        <li><a href="<%= infos_path %>">View Info</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="container" style="padding-top:50px;">
 <%= yield %>
-
+</div>
 </body>
 </html>
